@@ -1,0 +1,48 @@
+body {
+    background-image: url(https://3djungle.ru/upload/resize_cache/iblock/2ef/400_400_1/2efbde5eea73f55b444881939137a941.jpg);
+}
+
+
+.block { 
+    background: rgba(223,223,223,0.538532913165266);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 15px 15px 15px 15px;
+    padding: 15px ;
+    transition: .3s;
+    border-radius: 15px;
+    border: 1px rgb(38, 38, 38) solid;
+    
+}
+
+.block:hover {
+    background-color: rgb(223, 223, 223);
+    width: 300px;
+}
+
+.content {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+
+}
+
+.top {
+    height: 100px;
+}

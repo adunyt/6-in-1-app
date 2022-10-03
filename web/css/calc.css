@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(https://3djungle.ru/upload/resize_cache/iblock/2ef/400_400_1/2efbde5eea73f55b444881939137a941.jpg);
+
+}
+
+.back {
+  background-color: gray;
+  text-decoration: none;
+  color: white;
+  margin: 15px 15px 15px 15px;
+  font-size: x-large;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  outline: none;
+  background-color: rgb(223, 223, 223);
+}
+
+.calculator-grid>button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  border-radius: 15px;
+  border: 1px white solid;
+  grid-column: 1 / -1;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
