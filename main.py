@@ -1,4 +1,4 @@
 import eel
 
-eel.init('web')
-eel.start('index.html')
+eel.init("web")  # EEL initialization
+eel.start("index.html", size=[800, 500]) 
