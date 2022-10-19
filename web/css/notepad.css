@@ -1,19 +1,58 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Dosis:300,400,600,700,800|Droid+Sans:400,700|Lato:300,400,700,900|PT+Sans:400,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,300,700|Open+Sans+Condensed:300,700|Work+Sans:400,300,700|Play:400,700|Maven+Pro:400,500,700,900|Roboto+Mono:400,300,500,700&subset=latin,latin-ext);
+
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+  padding: 5px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .back {
-  background-color: gray;
+  position: absolute;
+  left: 0;
   text-decoration: none;
-  color: white;
-  margin: 15px 15px 15px 15px;
+  color: coral;
   font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-html {
 
+.back span{
+  margin: 0 0 2px 0;
+  padding: 0;
+}
+
+.back svg{
+  width: 32px;
+  height: 32px;
+}
+
+.header-heading{
+  margin: 0 0 2px 0;
+  font-weight: lighter;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#medium-editor-toolbar-actions1 li button{
+  background: none;
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+}
+
+html {
   color: #303030;
   font-size: 16px;
   font-family: 'Roboto Mono', monospace;
@@ -26,31 +65,29 @@ html {
 }
 
 body {
-  background-image: url(https://3djungle.ru/upload/resize_cache/iblock/2ef/400_400_1/2efbde5eea73f55b444881939137a941.jpg);
+  background-color: whitesmoke;
   overflow: hidden;
   margin: 0;
-  transition: all 0.314s ease-out;
   text-align: left;
 }
 
 .content {
-
-  position: absolute;
-  top: 2%;
-  bottom: 2%;
-  left: 2%;
-  right: 2%;
+  background-color: white;
+  padding: 20px;
   white-space: pre-wrap;
   line-height: 1.3em;
   outline: none;
   overflow: auto;
 }
+
 .content p {
   margin: 1rem 0;
 }
+
 .content img {
   float: left;
 }
+
 .content a {
   color: Blue;
 }
@@ -73,6 +110,7 @@ body {
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
 }
+
 .saveMessage.visible {
   -moz-animation: blink ease 3s;
   -webkit-animation: blink ease 3s;
@@ -87,6 +125,7 @@ body {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+
   40% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -94,6 +133,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   60% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -101,6 +141,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   100% {
     opacity: 0;
     -moz-transform: translateY(50px);
@@ -109,6 +150,7 @@ body {
     transform: translateY(50px);
   }
 }
+
 @-moz-keyframes blink {
   0% {
     opacity: 0;
@@ -117,6 +159,7 @@ body {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+
   40% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -124,6 +167,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   60% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -131,6 +175,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   100% {
     opacity: 0;
     -moz-transform: translateY(50px);
@@ -139,6 +184,7 @@ body {
     transform: translateY(50px);
   }
 }
+
 @-ms-keyframes blink {
   0% {
     opacity: 0;
@@ -147,6 +193,7 @@ body {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+
   40% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -154,6 +201,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   60% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -161,6 +209,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   100% {
     opacity: 0;
     -moz-transform: translateY(50px);
@@ -169,6 +218,7 @@ body {
     transform: translateY(50px);
   }
 }
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -177,6 +227,7 @@ body {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+
   40% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -184,6 +235,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   60% {
     opacity: 0.7;
     -moz-transform: translateY(0px);
@@ -191,6 +243,7 @@ body {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
+
   100% {
     opacity: 0;
     -moz-transform: translateY(50px);
