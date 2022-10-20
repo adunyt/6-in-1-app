@@ -12,26 +12,29 @@ main {
 .left-block {
     position: absolute;
     top: 50px;
-    width: 150px;
-    border: 1px solid #e0e0e0;
+    width: 160px;
+    background-color: #f3f3f3;
+    padding: 10px;
 }
 
 .colors {
-    background-color: #ece8e8;
+    background-color: #f3f3f3;
     text-align: center;
-    padding-bottom: 5px;
-    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .colors button {
-    display: inline-block;
+    display: block;
     border: 1px solid #00000026;
-    border-radius: 0;
-    outline: none;
+    border-radius: 2px;
     cursor: pointer;
     width: 20px;
     height: 20px;
-    margin-bottom: 5px
+    margin: 4px;
 }
 
 .colors button:nth-of-type(1) {
@@ -154,22 +157,19 @@ main {
     background-color: #ffffff;
 }
 
-.brushes {
-    background-color: purple;
-    padding-top: 5px
+.brushes{
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
 }
 
 .brushes button {
     display: block;
     width: 100%;
-    border: 0;
-    border-radius: 0;
-    background-color: #ece8e8;
-    margin-bottom: 5px;
-    padding: 5px;
+    border: none;
+    background-color: #f3f3f3;
+    border-top: 1px solid lightgray;
     height: 30px;
     outline: none;
-    position: relative;
     cursor: pointer;
 }
 
@@ -200,24 +200,20 @@ main {
     height: 5px;
 }
 
-.buttons {
-    height: 80px;
-    padding-top: 10px;
-}
-
 .buttons button {
     display: block;
     width: 100%;
-    border: 0;
-    border-radius: 0;
-    background-color: #ece8e8;
-    margin-bottom: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: coral;
+    margin: 5px 0;
     padding: 5px;
     height: 30px;
     outline: none;
     position: relative;
     cursor: pointer;
     font-size: 16px;
+    color: white;
 }
 
 #paint-canvas {
