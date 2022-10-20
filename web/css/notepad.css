@@ -5,47 +5,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
-  padding: 5px;
-  display: flex;
-  border-bottom: 1px solid gray;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.back {
-  position: absolute;
-  left: 0;
-  text-decoration: none;
-  color: coral;
-  font-size: x-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.back span{
-  margin: 0 0 2px 0;
-  padding: 0;
-}
-
-.back svg{
-  width: 32px;
-  height: 32px;
-}
-
-.header-heading{
-  margin: 0 0 2px 0;
-  font-weight: lighter;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 #medium-editor-toolbar-actions1 li button{
   background: none;
   border: 1px solid lightgray;

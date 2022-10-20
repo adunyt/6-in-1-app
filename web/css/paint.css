@@ -2,28 +2,18 @@
     box-sizing: border-box;
 }
 
-
-
-.back {
-    background-color: gray;
-    text-decoration: none;
-    color: white;
-    margin: 15px 15px 15px 15px;
-    font-size: x-large;
-}
-
 main {
-    width: 800px;
-    border: 1px solid #e0e0e0;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-grow: 1;
-    margin: 10px auto;
 }
 
 .left-block {
-    width: 160px;
-    border-right: 1px solid #e0e0e0;
+    position: absolute;
+    top: 50px;
+    width: 150px;
+    border: 1px solid #e0e0e0;
 }
 
 .colors {
@@ -228,10 +218,6 @@ main {
     position: relative;
     cursor: pointer;
     font-size: 16px;
-}
-
-.right-block {
-    width: 640px;
 }
 
 #paint-canvas {

@@ -1,69 +1,56 @@
-*{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    flex-direction: column;
-    background-color: whitesmoke;
-}
-
-.menu{
+header {
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    width: 80%;
+    border-bottom: 1px solid lightgray;
+    height: 50px;
+    justify-content: center;
+    background-color: #f3f3f3;
 }
 
-.menu a{
+.back {
+    position: absolute;
+    left: 15px;
     text-decoration: none;
-    color: black;
-    font-size: large;
-}
-
-.block{
-    min-height: 150px;
-    min-width: 150px;
-    height: 22vmin;
-    width: 22vmin;
-    margin: 5px;
-    box-sizing: border-box;
-
+    color: coral;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.block:hover{
-    outline-style: solid;
-    outline-color: lightgray;
-    outline-width: 1px;
-    color: black;
-}
-
-.block *{
-    margin: 0;
+.back span {
+    display: block;
+    font-size: x-large;
+    text-align: center;
+    margin: 0 0 3px 0;
     padding: 0;
+    padding-left: 5px;
 }
 
-.block svg{
-    color: coral;
-    width: 48px;
-    height: 48px;
+.back svg{
+    flex-basis: 40%;
 }
 
-footer a{
-    color: coral;
-    text-decoration: none;
-}
-
-footer a:visited{
-    color: sandybrown;
+.header-heading {
+    margin: 0 0 2px 0;
+    font-weight: lighter;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
