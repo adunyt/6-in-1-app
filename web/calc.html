@@ -6,21 +6,21 @@
   <title>Калькулятор</title>
   <link rel="stylesheet" href="./css/calc.css">
   <script type="text/javascript" src="eel.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator</title>
-    <link href="cal.css" rel="stylesheet">
-    <script src="cal.js" defer></script>
-  </head>
-
-  <body>
-    <a class="back" href="./index.html">Back</a>
+  <header>
+    <button class="back" onClick="window.location.href='./index.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26.5" fill="currentColor" class="bi bi-chevron-left"
+        viewBox="4.5 1.5 7 13">
+        <path fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+      </svg>
+      <span>Назад</span></button>
+    <h1 class="header-heading">Калькулятор</h1>
+  </header>
+  <div class="content">
     <div class="calculator-grid">
       <div class="output">
         <div data-previous-operand class="previous-operand"></div>
@@ -45,7 +45,7 @@
       <button data-number>0</button>
       <button data-equals class="span-two">=</button>
     </div>
-  </body>
+  </div>
 
   <script src="./js/calc.js"></script>
 
