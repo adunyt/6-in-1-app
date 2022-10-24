@@ -1,7 +1,6 @@
-import eel
-
-eel.init("web")  # EEL initialization
 try:
+    import eel
+    eel.init("web")
     eel.start("index.html") 
 except Exception as e:
     import ctypes  
