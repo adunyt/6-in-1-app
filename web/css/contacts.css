@@ -1,0 +1,54 @@
+.block  {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.photo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50% ;
+    object-fit: cover;
+    object-position: center;
+}
+
+.poloska {
+    height: 1px;
+    background-color: gainsboro;
+    margin: 0 15px 0 15px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.list li{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.add { 
+    position: absolute;
+    right: 15px;
+    text-decoration: none;
+    color: coral;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
