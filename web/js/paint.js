@@ -11,19 +11,18 @@ window.onload = function () {
   context.strokeStyle = 'black';
   context.lineWidth = 1;
   var isDrawing = false;
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight - 54;
 
   window.addEventListener('resize', resizeCanvas, false);
 
   function resizeCanvas() {
-    let oldDrawning = canvas.cloneNode(true);
+    let oldDrawning = canvas.getContext("2d")
+                            .getImageData(0, 0, context.canvas.width, context.canvas.height);
+    canvas.getContext("2d")
+          .clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 54;
     console.log("жмыхнулись");
-    let scaleWidth = window.innerWidth / canvas.width;
-    let scaleHeight = (window.innerHeight - 54) / canvas.height;
-    console.log(scaleWidth + " " + scaleHeight);
-    console.log("жмыхнулись");
-    canvas.getContext("2d").scale(scaleWidth, scaleHeight);
+    context.putImageData(oldDrawning, 0, 0);
     console.log("перерисовываем");
   }
 
