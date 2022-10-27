@@ -20,7 +20,7 @@
   border: none;
   box-shadow: 1px solid lightgray;
   outline: none;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
 }
 
 .calculator-grid button:nth-of-type(16){
@@ -60,4 +60,9 @@
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+.dark-mode calculator-grid button {
+  background-color: rgb(52, 47, 47);
+  color: white;
 }
