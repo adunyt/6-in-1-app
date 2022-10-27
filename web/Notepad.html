@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/notepad.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@5.23.2/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">  <script type="text/javascript" src="eel.js"></script>
   <link rel="icon" href="logo-6-in-1-small.png">
+  <link rel="stylesheet" href="css/dark.css">
 </head>
 
 <body>
@@ -22,6 +23,9 @@
       </svg>
       <span>Назад</span></button>
     <h1 class="header-heading">Блокнот</h1>
+    <button class="dm" onclick="darkMode()">Darkmode</button>
+    <button class="da" onclick="lightMode()">LightMode</button>
+    <script src="./js/darmode.js"></script>
   </header>
   <div class="content" contenteditable="true" role="textbox">
     <li><span style="line-height: 1.3em;">CTRL+B - <b>жирный</b></span><br></li>
