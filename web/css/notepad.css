@@ -21,14 +21,16 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   margin: 0;
   text-align: left;
 }
 
+.dark-mode content {
+  color: white;
+}
 .content {
-  background-color: white;
   padding: 20px;
   white-space: pre-wrap;
   line-height: 1.3em;
