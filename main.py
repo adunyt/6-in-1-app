@@ -1,3 +1,9 @@
+import mailbox
+import eel
+from imap_tools import MailBox, AND
+import smtplib
+
+@eel.expose
 def contact_saver(contact: str) -> str:
     import json
     import os
@@ -9,22 +15,12 @@ def contact_saver(contact: str) -> str:
         contacts.append(newContact)
         json.dump(contacts, file)
     except Exception as e:
-        print(e)
         raise e
-        return "{}"
     finally:
         os.close(file)
 
 try:
-    import eel
-    contact_saver("""
-        {
-            "firstName": "Adun",
-            "secondName": "YT",
-            "e-mail": null,
-            "phone": 89001234567,
-            "imgName": "adunyt-image.png"
-        }""")
+    getLetters()
     eel.init("web")
     eel.start("index.html") 
 except Exception as e:

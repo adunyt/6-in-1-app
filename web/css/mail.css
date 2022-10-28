@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    height: 93.5vh;
+}
+
+.mail-list{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-right: 1px solid lightgray;
+    margin: 0;
+    padding: 0;
+}
+
+.mail-view{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
