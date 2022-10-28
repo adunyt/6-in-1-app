@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 in 1 app</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <script type="text/javascript" src="eel.js"></script>
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+
+    <link rel="stylesheet" href="css/todo.css">
+
+</head>
+
+<body>
+    <header>
+        <button class="back" onClick="window.location.href='./index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26.5" fill="currentColor"
+                class="bi bi-chevron-left" viewBox="4.5 1.5 7 13">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+            <span>Назад</span>
+        </button>
+        <h1 class="header-heading">Заметки</h1>
+        <button class="dm" onclick="darkMode()">Darkmode</button>
+        <button class="da" onclick="lightMode()">LightMode</button>
+        <script src="./js/darkmode.js"></script>
+    </header>
+
+    <div class="content">
+        <form class="add">
+            <input type="text" name="add" placeholder="Add item...">
+            <div class="input-buttons">
+                <a href="#0" class="add-todo">
+                    <i class="fas fa-plus add plus-icon"></i>
+                </a>
+            </div>
+        </form>
+        <ul class="todos align">
+            <li>
+
+                <input type="checkbox" id="todo_1">
+                <label for="todo_1">
+                    <span class="check"></span>
+                    Grocery store
+                </label>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+
+            <li>
+                <input type="checkbox" id="todo_2">
+                <label for="todo_2">
+                    <span class="check"></span>
+                    Code a todo list
+                </label>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+
+            <li>
+                <input type="checkbox" id="todo_3">
+                <label for="todo_3">
+                    <span class="check"></span>
+                    Walk the dog
+                </label>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+
+            <li>
+                <input type="checkbox" id="todo_4">
+                <label for="todo_4">
+                    <span class="check"></span>
+                    Pay Netflix
+                </label>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+
+        </ul>
+    </div>
+
+
+</body>
+
+<script src="./js/todo.js"></script>
+
+</body>
+
+</html>
