@@ -20,11 +20,21 @@ textarea {
   line-height: inherit;
 }
 
+.plusik {
+    color: coral;
+    height: 25px;
+    width: 25px;
+}
 
 .content {
   padding: 10px 20px;
 }
-
+.delete {
+    color: coral;
+    padding-top: 10px;
+    width: 20px;
+    height: 20px;
+}
 .content form {
   display: flex;
   justify-content: space-between;
@@ -111,10 +121,7 @@ textarea {
   display: block;
   background: #171717;
   border-radius: 3px;
-  border: 1px solid #ffb510;
-  box-shadow: -2px -2px 2px rgba(67, 67, 67, 0.5),
-    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
-    inset -2px -2px 2px rgba(67, 67, 67, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid coral;
 }
 
 .content input[type="checkbox"]:checked + label {
