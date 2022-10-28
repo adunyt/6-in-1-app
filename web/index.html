@@ -19,7 +19,12 @@
 </head>
 
 <body>
-    <div class="menu">
+    <div class="dmode">
+    <button class="dm" onclick="darkMode()">Darkmode</button>
+    <button class="da" onclick="lightMode()">LightMode</button>
+    <script src="./js/darkmode.js"></script>
+</div>
+    <div class="menu"> 
         <button onClick="window.location.href='./calc.html'">
             <div class="block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
@@ -57,7 +62,7 @@
                 <p class="text">Блокнот</p>
             </div>
         </button>
-        <button onClick="window.location.href=''">
+        <button onClick="window.location.href='./todo.html'">
             <div class="block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-stickies" viewBox="0 0 16 16">
