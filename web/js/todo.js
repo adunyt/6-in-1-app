@@ -12,8 +12,6 @@ let dayName = date.toLocaleString(lang, {
   weekday: "long"
 });
 
-dayTitle.innerHTML = dayName;
-
 let listLenght = list.lenght;
 
 const generateTempalate = (todo) => {
