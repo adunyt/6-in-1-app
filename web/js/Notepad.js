@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var content, createEditor, loadText, showSavedToast;
 
   content = $(".content");
@@ -43,7 +43,7 @@
     return el.addClass("visible");
   };
 
-  $(function() {
+  $(function () {
     loadText();
     return createEditor();
   });

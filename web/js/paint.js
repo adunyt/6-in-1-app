@@ -16,9 +16,9 @@ window.onload = function () {
 
   function resizeCanvas() {
     let oldDrawning = canvas.getContext("2d")
-                            .getImageData(0, 0, context.canvas.width, context.canvas.height);
+      .getImageData(0, 0, context.canvas.width, context.canvas.height);
     canvas.getContext("2d")
-          .clearRect(0, 0, canvas.width, canvas.height);
+      .clearRect(0, 0, canvas.width, canvas.height);
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight - 54;
     console.log("жмыхнулись");
