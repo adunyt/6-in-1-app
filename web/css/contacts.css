@@ -1,18 +1,20 @@
-.block  {
+.block {
     display: flex;
     flex-direction: column;
 }
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
 }
+
 .photo {
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    border-radius: 50% ;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
@@ -23,12 +25,12 @@
     margin: 0 15px 0 15px;
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
 }
 
-.list li{
+.list li {
     display: flex;
     align-items: center;
     height: 50px;
@@ -38,7 +40,7 @@ h2 {
     margin: 0;
 }
 
-.add { 
+.add {
     position: absolute;
     right: 15px;
     text-decoration: none;
