@@ -3,6 +3,7 @@ function darkMode() {
     var content = document.getElementById("DarkModetext");
     element.className = "dark-mode";
 }
+
 function lightMode() {
     var element = document.body;
     var content = document.getElementById("DarkModetext");

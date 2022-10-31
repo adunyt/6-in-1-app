@@ -6,7 +6,7 @@
   user-select: auto;
 }
 
-#medium-editor-toolbar-actions1 li button{
+#medium-editor-toolbar-actions1 li button {
   background: none;
   border: 1px solid lightgray;
   background-color: whitesmoke;
@@ -30,6 +30,7 @@ body {
 .dark-mode content {
   color: white;
 }
+
 .content {
   padding: 20px;
   white-space: pre-wrap;

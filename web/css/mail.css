@@ -85,7 +85,7 @@
     filter: blur(3px);
 }
 
-.mail-list{
+.mail-list {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -94,7 +94,7 @@
     padding: 0;
 }
 
-.mail-view{
+.mail-view {
     display: flex;
     flex-direction: column;
     width: 60%;

@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,7 +9,7 @@ body{
     background-color: whitesmoke;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body{
     width: 80%;
 }
 
-.menu button{
+.menu button {
     text-decoration: none;
     color: black;
     font-size: large;
@@ -26,7 +26,7 @@ body{
     cursor: pointer;
 }
 
-.block{
+.block {
     min-height: 150px;
     min-width: 150px;
     height: 22vmin;
@@ -39,29 +39,28 @@ body{
     flex-direction: column;
 }
 
-.block:hover{
+.block:hover {
     outline-style: solid;
     outline-color: lightgray;
     outline-width: 1px;
 }
 
-.block *{
+.block * {
     margin: 0;
     padding: 0;
 }
 
-.block svg{
+.block svg {
     color: coral;
     width: 48px;
     height: 48px;
 }
 
-footer a{
+footer a {
     color: coral;
     text-decoration: none;
 }
 
-footer a:visited{
+footer a:visited {
     color: sandybrown;
 }
-
