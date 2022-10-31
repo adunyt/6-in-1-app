@@ -59,13 +59,7 @@ header {
 .dm {
     position: absolute;
     right: 15px;
-    text-decoration: none;
     color: coral;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
     background: none;
     border: none;
     cursor: pointer;
@@ -74,14 +68,12 @@ header {
 .da {
     position: absolute;
     right: 50px;
-    text-decoration: none;
     color: coral;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden;
 }
