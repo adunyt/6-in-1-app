@@ -11,12 +11,12 @@
     display: none;
     height: 30vh;
     width: 20vw;
+    min-width: 200px;
     position: absolute;
     background-color: whitesmoke;
     z-index: 1;
     flex-direction: column;
     padding: 25px;
-    border-radius: 5px;
     justify-content: space-between;
     align-items: center;
     top: 0;
@@ -42,7 +42,6 @@
 .input-field input{
     border: 1px lightgray solid;
     padding: 7px;
-    border-radius: 10px;
     outline: none;
     transition-duration: .3s;
     margin-top: 5px;
@@ -59,10 +58,9 @@
     background: coral;
     border: none;
     color: white;
-    border-radius: 10px;
     font-size: medium;
     transition-duration: .2s;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 #login-popup button:hover{
