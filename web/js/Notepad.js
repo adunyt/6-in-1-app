@@ -49,3 +49,14 @@
   });
 
 }).call(this);
+
+function saveToFile () {
+  var content = document.querySelector(".content");
+  console.log(content.textContent);
+  const link = document.createElement("a");
+  const file = new Blob([content.textContent], { type: 'text/plain' });
+  link.href = URL.createObjectURL(file);
+  link.download = "sample.txt";
+  link.click();
+  URL.revokeObjectURL(link.href);
+}

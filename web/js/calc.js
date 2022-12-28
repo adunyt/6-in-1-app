@@ -1,128 +1,130 @@
-class Calculator {
-  constructor(previousOperandTextElement, currentOperandTextElement) {
-    this.previousOperandTextElement = previousOperandTextElement
-    this.currentOperandTextElement = currentOperandTextElement
-    this.clear()
-  }
+// javascript calculator
 
-  clear() {
-    this.currentOperand = ''
-    this.previousOperand = ''
-    this.operation = undefined
-  }
+// upper output is for showing the expression
+let outputUpper = document.querySelector('.previous-operand');
+// lower output is for showing the result
+let outputLower = document.querySelector('.current-operand');
 
-  delete() {
-    this.currentOperand = this.currentOperand.toString().slice(0, -1)
-  }
-
-  appendNumber(number) {
-    if (number === '.' && this.currentOperand.includes('.')) return
-    this.currentOperand = this.currentOperand.toString() + number.toString()
-  }
-
-  chooseOperation(operation) {
-    if (this.currentOperand === '') return
-    if (this.previousOperand !== '') {
-      this.compute()
-    }
-    this.operation = operation
-    this.previousOperand = this.currentOperand
-    this.currentOperand = ''
-  }
-
-  compute() {
-    let computation
-    const prev = parseFloat(this.previousOperand)
-    const current = parseFloat(this.currentOperand)
-    if (isNaN(prev) || isNaN(current)) return
-    switch (this.operation) {
-      case '+':
-        computation = prev + current
-        break
-      case '-':
-        computation = prev - current
-        break
-      case '*':
-        computation = prev * current
-        break
-      case '÷':
-        computation = prev / current
-        break
-      default:
-        return
-    }
-    this.currentOperand = computation
-    this.operation = undefined
-    this.previousOperand = ''
-  }
-
-  getDisplayNumber(number) {
-    const stringNumber = number.toString()
-    const integerDigits = parseFloat(stringNumber.split('.')[0])
-    const decimalDigits = stringNumber.split('.')[1]
-    let integerDisplay
-    if (isNaN(integerDigits)) {
-      integerDisplay = ''
-    } else {
-      integerDisplay = integerDigits.toLocaleString('en', {
-        maximumFractionDigits: 0
-      })
-    }
-    if (decimalDigits != null) {
-      return `${integerDisplay}.${decimalDigits}`
-    } else {
-      return integerDisplay
-    }
-  }
-
-  updateDisplay() {
-    this.currentOperandTextElement.innerText =
-      this.getDisplayNumber(this.currentOperand)
-    if (this.operation != null) {
-      this.previousOperandTextElement.innerText =
-        `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
-    } else {
-      this.previousOperandTextElement.innerText = ''
-    }
+// function to get number input
+function pressNum(e) {
+  if (outputLower.innerHTML === '0') {
+    outputLower.innerHTML = e.innerHTML;
+  } else {
+    outputLower.innerHTML += e.innerHTML;
   }
 }
 
+// clear all
+function pressAllClear() {
+  outputUpper.innerHTML = '';
+  outputLower.innerHTML = '0';
+}
 
-const numberButtons = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operation]')
-const equalsButton = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('[data-delete]')
-const allClearButton = document.querySelector('[data-all-clear]')
-const previousOperandTextElement = document.querySelector('[data-previous-operand]')
-const currentOperandTextElement = document.querySelector('[data-current-operand]')
+// clear one
+function pressClear() {
+  outputLower.innerHTML = outputLower.innerHTML.slice(0, -1);
+}
 
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+// calculate button
+function pressEqual() {
+  let exp = outputLower.innerHTML;
+  outputUpper.innerHTML = exp;
+  exp = exp.replace(/×/g, '*').replace(/÷/g, '/');
+  let result;
+  try {
+    result = math.evaluate(exp);
+    // if decimal number more than 4 decimal places
+    if (result.toString().indexOf('.') !== -1) {
+      result = result.toFixed(4);
+    }
+  } catch (e) {
+    result = 'Error';
+  }
+  outputLower.innerHTML = result;
+}
 
-numberButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    calculator.appendNumber(button.innerText)
-    calculator.updateDisplay()
-  })
-})
+function pressOperator(e) {
+  // check last operator
+  let lastOperator = outputLower.innerHTML.slice(-1);
+  if (lastOperator.includes('+', '-', '×', '÷')) {
+    output.innerHTML = outputLower.innerHTML.slice(0, -1) + e.innerHTML;
+  } else {
+    outputLower.innerHTML += e.innerHTML;
+  }
+}
 
-operationButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    calculator.chooseOperation(button.innerText)
-    calculator.updateDisplay()
-  })
-})
+function pressDot() {
+  outputLower.innerHTML += '.';
+}
 
-equalsButton.addEventListener('click', button => {
-  calculator.compute()
-  calculator.updateDisplay()
-})
+function pressBracket(e) {
+  outputLower.innerHTML += e.innerHTML;
+}
 
-allClearButton.addEventListener('click', button => {
-  calculator.clear()
-  calculator.updateDisplay()
-})
-
-deleteButton.addEventListener('click', button => {
-  calculator.delete()
-  calculator.updateDisplay()
-})
+// attach keyboard event
+document.addEventListener('keydown', function (e) {
+  switch (e.key) {
+    case '0':
+      pressNum(document.querySelector('button:nth-child(2)'));
+      break;
+    case '1':
+      pressNum(document.querySelector('button:nth-child(5)'));
+      break;
+    case '2':
+      pressNum(document.querySelector('button:nth-child(6)'));
+      break;
+    case '3':
+      pressNum(document.querySelector('button:nth-child(7)'));
+      break;
+    case '4':
+      pressNum(document.querySelector('button:nth-child(9)'));
+      break;
+    case '5':
+      pressNum(document.querySelector('button:nth-child(10)'));
+      break;
+    case '6':
+      pressNum(document.querySelector('button:nth-child(11)'));
+      break;
+    case '7':
+      pressNum(document.querySelector('button:nth-child(13)'));
+      break;
+    case '8':
+      pressNum(document.querySelector('button:nth-child(14)'));
+      break;
+    case '9':
+      pressNum(document.querySelector('button:nth-child(15)'));
+      break;
+    case '+':
+      pressOperator(document.querySelector('button:nth-child(4)'));
+      break;
+    case '-':
+      pressOperator(document.querySelector('button:nth-child(8)'));
+      break;
+    case '*':
+      pressOperator(document.querySelector('button:nth-child(12)'));
+      break;
+    case '/':
+      pressOperator(document.querySelector('button:nth-child(16)'));
+      break;
+    case '.':
+      pressDot();
+      break;
+    case '(':
+      pressBracket(document.querySelector('button:nth-child(18)'));
+      break;
+    case ')':
+      pressBracket(document.querySelector('button:nth-child(19)'));
+      break;
+    case 'Enter':
+      // prevent default action
+      e.preventDefault();
+      pressEqual();
+      break;
+    case 'Backspace':
+      pressClear();
+      break;
+    case 'Escape':
+      pressAllClear();
+      break;
+  }
+});

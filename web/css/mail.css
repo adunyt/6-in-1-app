@@ -1,4 +1,4 @@
-.add-letter{
+.add-letter {
     position: absolute;
     right: 85px;
     color: gray;
@@ -7,7 +7,7 @@
     cursor: not-allowed;
 }
 
-#login-popup{
+#login-popup {
     display: none;
     height: 30vh;
     width: 20vw;
@@ -28,18 +28,18 @@
     border: 1px lightgray solid;
 }
 
-#login-popup h3{
+#login-popup h3 {
     margin: 0;
     padding: 0;
 }
 
-.input-field{
+.input-field {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.input-field input{
+.input-field input {
     border: 1px lightgray solid;
     padding: 7px;
     outline: none;
@@ -48,12 +48,12 @@
     outline: 2px transparent solid;
 }
 
-.input-field input:focus{
+.input-field input:focus {
     border-color: coral;
     outline-color: rgba(255, 127, 80, 0.5);
 }
 
-#login-popup button{
+#login-popup button {
     padding: 10px 15px;
     background: coral;
     border: none;
@@ -63,11 +63,11 @@
     cursor: pointer;
 }
 
-#login-popup button:hover{
+#login-popup button:hover {
     background-color: rgb(255, 150, 111);
 }
 
-.spinner{
+.spinner {
     background-color: white;
     display: flex;
     align-items: center;
@@ -75,12 +75,25 @@
     height: 100%;
 }
 
-.content{
+#spinner-popup {
+    position: absolute;
+    margin: -25px;
+    width: 20vw;
+    min-width: 250px;
+}
+
+#spinner-mail-list{
+    position: absolute;
+    background-color: white;
+    width: 40%;
+}
+
+.content {
     display: flex;
     position: relative;
     z-index: 0;
     min-height: 100vh;
-    filter: blur(3px);
+    filter: none;
 }
 
 .mail-list {
@@ -98,10 +111,42 @@
     width: 60%;
 }
 
-.empty-view-text{
+.empty-view-text {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     color: gray
+}
+
+.mail-letter{
+    border-bottom: 1px whitesmoke solid;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mail-letter:hover{
+    background-color: whitesmoke;
+}
+
+.mail-letter *{
+    margin: 5px;
+    padding: 0;
+}
+
+.mail-letter h4{
+    font-size: 16px;
+}
+
+.mail-letter h5{
+    font-weight: lighter;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.mail-letter p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

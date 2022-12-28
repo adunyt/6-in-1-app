@@ -55,7 +55,7 @@
         <script src="./js/darkmode.js"></script>
     </header>
 
-    <form id="login-popup" onsubmit="saveCreditals(); tryLogin(); return false;">
+    <!-- <form id="login-popup" onsubmit="form(); return false;">
         <h3>Вход</h3>
         <div class="input-field">
             <span>Логин</span>
@@ -66,17 +66,24 @@
             <input type="password" placeholder="Пароль" id="password-input" required>
         </div>
         <button>Войти</button>
-    </form>
+        <div class="spinner hidden" id="spinner-popup" style="position: absolute; margin: -25px; width: 20vw; min-width: 250px;">
+            <img src="img/windows-loading-orange.gif" alt="" width="40">
+        </div>
+    </form> -->
 
     <div class="content">
         <ul class="mail-list">
-            <li></li>
-            <div class="spinner">
+            <li class="mail-letter">
+                <h4>Заголовок письма</h4>
+                <h5>ОтКого@письмо.ру</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quia dignissimos expedita dolore accusamus beatae ut non quod enim est, nostrum cupiditate. Voluptatum nobis, quae fuga eius esse eligendi quo.</p>
+            </li>
+            <!-- <div class="spinner" id="spinner-mail-list">
                 <img src="img/windows-loading-orange.gif" alt="" width="40">
-            </div>
+            </div> -->
         </ul>
         <div class="mail-view">
-            <span class="empty-view-text">Выберите письмо слева чтобы посмотреть его</span>
+            <span class="empty-view-text">(Еще в разработке)<br>Выберите письмо слева чтобы посмотреть его</span>
         </div>
     </div>
     <script src="js/mail.js"></script>

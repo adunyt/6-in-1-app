@@ -1,13 +1,19 @@
 .block {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.block h2{
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding: 25px;
 }
 
 .photo {
@@ -34,6 +40,9 @@ ul {
     display: flex;
     align-items: center;
     height: 50px;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid gainsboro;
 }
 
 h2 {

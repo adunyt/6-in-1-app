@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+  <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
 
   <link rel="stylesheet" href="./css/calc.css">
 </head>
@@ -51,24 +52,26 @@
         <div data-previous-operand class="previous-operand"></div>
         <div data-current-operand class="current-operand"></div>
       </div>
-      <button data-all-clear class="span-two">AC</button>
-      <button data-delete>DEL</button>
-      <button data-operation>÷</button>
-      <button data-number>1</button>
-      <button data-number>2</button>
-      <button data-number>3</button>
-      <button data-operation>*</button>
-      <button data-number>4</button>
-      <button data-number>5</button>
-      <button data-number>6</button>
-      <button data-operation>+</button>
-      <button data-number>7</button>
-      <button data-number>8</button>
-      <button data-number>9</button>
-      <button data-operation>-</button>
-      <button data-number>.</button>
-      <button data-number>0</button>
-      <button data-equals class="span-two">=</button>
+      <button data-all-clear onclick="pressAllClear()" >AC</button>
+      <button data-delete onclick="pressClear()">DEL</button>
+      <button data-number onclick="pressBracket(this)">(</button>
+      <button data-number onclick="pressBracket(this)">)</button>
+      <button data-operation onclick="pressOperator(this)">÷</button>
+      <button data-number onclick="pressNum(this)">1</button>
+      <button data-number onclick="pressNum(this)">2</button>
+      <button data-number onclick="pressNum(this)">3</button>
+      <button data-operation onclick="pressOperator(this)">*</button>
+      <button data-number onclick="pressNum(this)">4</button>
+      <button data-number onclick="pressNum(this)">5</button>
+      <button data-number onclick="pressNum(this)">6</button>
+      <button data-operation onclick="pressOperator(this)">+</button>
+      <button data-number onclick="pressNum(this)">7</button>
+      <button data-number onclick="pressNum(this)">8</button>
+      <button data-number onclick="pressNum(this)">9</button>
+      <button data-operation onclick="pressOperator(this)">-</button>
+      <button data-number onclick="pressDot()">.</button>
+      <button data-number onclick="pressNum(this)">0</button>
+      <button data-equals onclick="pressEqual()">=</button>
     </div>
   </div>
 

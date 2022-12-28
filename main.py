@@ -1,8 +1,5 @@
-from mailbox import Mailbox
-from typing import Reversible
-from urllib import response
 import eel
-from imap_tools import MailBox, AND, A
+from imap_tools import MailBox
 from email.mime.text import MIMEText
 import smtplib
 import ssl
@@ -43,10 +40,10 @@ def contact_saver(contact: str) -> str:
 
 
 @eel.expose
-def getLetters(email, password, imap_name):
+def getLetters(email, password, imap_name, limit=None):
     imap_server = imap_servers[imap_name]
     with MailBox(imap_server["server"], imap_server["port"]).login(email, password) as mailbox:
-        messages = mailbox.fetch()
+        messages = mailbox.fetch(limit=limit)
         return messages
 
 
@@ -69,7 +66,7 @@ def sendLetter(email: str, password: str, smtp_name: str, receivers: list, subje
                     "error_message": None}
         except Exception as e:
             return {"status": "Error",
-                    "error_message": e}
+                    "error_message": str(e)}
 
 
 @eel.expose
@@ -78,46 +75,47 @@ def tryLogin(server_name, login, password):
     jsonResponse = {}
     smtp = smpt_servers["Localhost"]
     imap = imap_servers[server_name]
-    print("start with")
     try:
         with smtplib.SMTP_SSL(smtp["server"], smtp["port"]) as smtp_server:
-            print("smtp ssl....")
+            print("SMTP SSL....")
             smtp_server.login(login, password)
             smtp_server.close()
             jsonResponse["smtp"] = {"status": "OK",
                                     "error_code": None}
     except ssl.SSLError:
         with smtplib.SMTP(smtp["server"], smtp["port"]) as smtp_server:
-            print("smtp....")
+            print("SMTP without SSL....")
             smtp_server.login(login, password)
             smtp_server.close()
             jsonResponse["smtp"] = {"status": "OK",
                                     "error_code": None}
     except Exception as e:
         jsonResponse["smtp"] = {"status": "Error",
-                                "error_code": e}
+                                "error_code": str(e)}
 
     with MailBox(imap["server"], imap["port"]) as imap_server:
-        print("imap....")
+        print("IMAP....")
         try:
             imap_server.login(login, password)
             jsonResponse["imap"] = {"status": "OK",
                                     "error_code": None}
         except Exception as e:
             jsonResponse["imap"] = {"status": "Error",
-                                    "error_code": e}
-
+                                    "error_code": str(e)}
+    print("Done")
     return jsonResponse
 
 
 try:
-    # getLetters("endercat1357@yandex.ru", "gymtnwklohdpqsvd")
-    print(tryLogin("Yandex", "endercat1357@yandex.ru", "gymtnwklohdpqsvd"))
     eel.init("web")
-    eel.start("index.html")
-except Exception as e:
+    eel.start("index.html")    
+except ImportError as e:
     import ctypes
     ctypes.windll.user32.MessageBoxW(0, str(e), "Ошибка!", 0)
 
 # TODO:
-# калькулятор
+# * Порядок действий у калькулятора
+# * Почта
+# * Сохранение текста в файл в блокноте
+# * Сохранение заметок при выходе и входе
+# * Контакты
